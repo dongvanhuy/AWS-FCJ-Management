@@ -37,6 +37,8 @@ npm install express dotenv express-handlebars body-parser mysql
 # Step 6: Install nodemon as a development dependency
 echo -e "Installing nodemon as a development dependency..."
 npm install --save-dev nodemon
+npm install -g nodemon
+
 
 # Step 7: Add npm start script to package.json
 if ! grep -q '"start":' package.json; then
