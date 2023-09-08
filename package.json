@@ -1,5 +1,5 @@
 {
-  "name": "simple-crudapp",
+  "name": "first-cloud-users-management-app",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -7,16 +7,16 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js"
   },
-  "author": "",
+  "author": "first cloud journey",
   "license": "ISC",
   "dependencies": {
-    "body-parser": "^1.20.0",
+    "body-parser": "^1.20.2",
     "dotenv": "^10.0.0",
-    "express": "^4.18.1",
+    "express": "^4.18.2",
     "express-handlebars": "^5.3.5",
     "mysql": "^2.18.1"
   },
   "devDependencies": {
-    "nodemon": "^2.0.16"
+    "nodemon": "^2.0.22"
   }
 }
