@@ -22,6 +22,11 @@ app.use(express.static("public"));
 app.engine("hbs", exphbs({ extname: ".hbs" }));
 app.set("view engine", "hbs");
 
+console.log("host:", process.env.DB_HOST);
+console.log("host:", process.env.DB_USER);
+console.log("host:", process.env.DB_PASS);
+console.log("host:", process.env.DB_NAME);
+
 // Connection pool
 const pool = mysql.createPool({
   connectionLimit: 100,
@@ -30,11 +35,6 @@ const pool = mysql.createPool({
   password: process.env.DB_PASS,
   database: process.env.DB_NAME,
 });
-
-console.log("host:", process.env.DB_HOST);
-console.log("host:", process.env.DB_USER);
-console.log("host:", process.env.DB_PASS);
-console.log("host:", process.env.DB_NAME);
 
 // connect to DB
 pool.getConnection((err, connection) => {
