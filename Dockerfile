@@ -1,5 +1,5 @@
-# Use Node.js 18.4.0-alpine as the base image
-FROM node:18.4.0-alpine
+# Use Node.js 16-alpine as the base image
+FROM node:16-alpine
 
 # Set the working directory
 WORKDIR /AWS-FCJ-Management
@@ -8,7 +8,7 @@ WORKDIR /AWS-FCJ-Management
 COPY package*.json ./
 
 # Install nodemon globally and other project dependencies
-RUN npm install -g nodemon@latest && npm install
+RUN npm install -g nodemon --save-dev nodemon express dotenv express-handlebars body-parser mysql
 
 # Copy the rest of your application code
 COPY . .

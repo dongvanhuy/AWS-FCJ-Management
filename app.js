@@ -22,7 +22,8 @@ app.use(express.static("public"));
 app.engine("hbs", exphbs({ extname: ".hbs" }));
 app.set("view engine", "hbs");
 
-console.log("host:", process.env.DB_HOST);
+console.log("host:", process.env);
+console.log("host:", process.env.PORT);
 console.log("host:", process.env.DB_USER);
 console.log("host:", process.env.DB_PASS);
 console.log("host:", process.env.DB_NAME);
