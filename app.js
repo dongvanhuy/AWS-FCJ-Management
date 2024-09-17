@@ -31,6 +31,11 @@ const pool = mysql.createPool({
   database: process.env.DB_NAME,
 });
 
+console.log("host:", process.env.DB_HOST);
+console.log("host:", process.env.DB_USER);
+console.log("host:", process.env.DB_PASS);
+console.log("host:", process.env.DB_NAME);
+
 // connect to DB
 pool.getConnection((err, connection) => {
   if (err) throw err; //not connected!!
