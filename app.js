@@ -25,11 +25,10 @@ app.set("view engine", "hbs");
 // Connection pool
 const pool = mysql.createPool({
   connectionLimit: 100,
-  host: "fcj-management-db-instance.cx4ccmg4mypa.ap-southeast-1.rds.amazonaws.com",
-  user: "usermgt",
-  password: "admin",
-  database: "123Vodanhphai",
-  port: 3306,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
 });
 
 // connect to DB
