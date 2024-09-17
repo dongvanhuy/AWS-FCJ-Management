@@ -1,9 +1,10 @@
+require("dotenv").config();
+console.log("data-env:", process.env);
+
 const express = require("express");
 const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
-
-require("dotenv").config();
 
 const app = express();
 const port = process.env.PORT || 5000;
@@ -21,12 +22,6 @@ app.use(express.static("public"));
 // Templeting engines
 app.engine("hbs", exphbs({ extname: ".hbs" }));
 app.set("view engine", "hbs");
-
-console.log("host:", process.env);
-console.log("host:", process.env.PORT);
-console.log("host:", process.env.DB_USER);
-console.log("host:", process.env.DB_PASS);
-console.log("host:", process.env.DB_NAME);
 
 // Connection pool
 const pool = mysql.createPool({
