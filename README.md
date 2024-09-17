@@ -66,7 +66,7 @@ The folder `./aws/codebuild/` includes:
 ### AWS CodeDeploy
 This folder `./aws/codedeploy/` includes:
 - `appspec.yaml`: The file is used by **CodeDeploy** to determine our **ECS task definition**.
-- `taskdef.json`: The file includes necessary information for our **ECS task definition** during the creation and **CodeDeploy** process.
+- `taskdef.json`: The file includes necessary information for our **ECS task definition** during the creation and **CodeDeploy** process.:
 
 ## References
 - [(Official) NodeJS](https://nodejs.org/en/docs/)
