@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 echo "Build AWS FCJ Management..."
 
-docker buildx build -t awsfcj .
+docker build -t awsfcj .
 
 echo "Build Compeleted!"
 
