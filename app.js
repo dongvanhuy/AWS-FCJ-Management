@@ -29,7 +29,8 @@ const pool = mysql.createPool({
   user: "admin",
   password: "123Vodanhphai",
   database: "usermgt",
-  port: "3306",
+  port: 3306,
+  connectTimeout: 20000,
 });
 
 // connect to DB
