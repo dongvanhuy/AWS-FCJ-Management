@@ -8,7 +8,7 @@ WORKDIR /AWS-FCJ-Management
 COPY package*.json ./
 
 # Install nodemon globally and other project dependencies
-RUN npm install -g nodemon --save-dev nodemon express dotenv express-handlebars body-parser mysql
+RUN npm install -g nodemon --save-dev nodemon express dotenv express-handlebars body-parser mysql && npm install
 
 # Copy the rest of your application code
 COPY . .
