@@ -1,5 +1,4 @@
 require("dotenv").config();
-console.log("data-env:", process.env);
 
 const express = require("express");
 const exphbs = require("express-handlebars");
@@ -26,10 +25,11 @@ app.set("view engine", "hbs");
 // Connection pool
 const pool = mysql.createPool({
   connectionLimit: 100,
-  host: process.env.DB_HOST,
-  user: process.env.DB_USER,
-  password: process.env.DB_PASS,
-  database: process.env.DB_NAME,
+  host: "fcj-management-db-instance.cx4ccmg4mypa.ap-southeast-1.rds.amazonaws.com",
+  user: "admin",
+  password: "123Vodanhphai",
+  database: "usermgt",
+  port: "3306",
 });
 
 // connect to DB
