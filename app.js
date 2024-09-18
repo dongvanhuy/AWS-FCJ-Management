@@ -4,9 +4,6 @@ const bodyParser = require("body-parser");
 const mysql = require("mysql");
 
 const app = express();
-app.listen(5000, "0.0.0.0", () => {
-  console.log("Server is running on port 5000");
-});
 const port = process.env.PORT || 5000;
 
 // Parsing middleware
@@ -43,4 +40,6 @@ pool.getConnection((err, connection) => {
 const routes = require("./server/routes/user");
 app.use("/", routes);
 
-app.listen(port, () => console.log(`Listening on port ${port}`));
+app.listen(5000, "0.0.0.0", () => {
+  console.log("Server is running on port 5000");
+});
