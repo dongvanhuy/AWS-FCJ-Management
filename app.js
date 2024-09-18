@@ -1,11 +1,12 @@
-require("dotenv").config();
-
 const express = require("express");
 const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
 
 const app = express();
+app.listen(5000, "0.0.0.0", () => {
+  console.log("Server is running on port 5000");
+});
 const port = process.env.PORT || 5000;
 
 // Parsing middleware
