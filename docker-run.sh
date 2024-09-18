@@ -7,4 +7,4 @@ echo "Build Compeleted!"
 
 echo "Running Application..."
 
-docker run -p :5000 awsfcj
+docker run -p 5000:5000 awsfcj
