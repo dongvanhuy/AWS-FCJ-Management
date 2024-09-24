@@ -3,6 +3,8 @@ const exphbs = require("express-handlebars");
 const bodyParser = require("body-parser");
 const mysql = require("mysql");
 
+require("dotenv").config();
+
 const app = express();
 const port = process.env.PORT || 5000;
 
@@ -23,12 +25,10 @@ app.set("view engine", "hbs");
 // Connection pool
 const pool = mysql.createPool({
   connectionLimit: 100,
-  host: "fcj-management-db-instance.cx4ccmg4mypa.ap-southeast-1.rds.amazonaws.com",
-  user: "admin",
-  password: "123Vodanhphai",
-  database: "usermgt",
-  port: 3306,
-  connectTimeout: 20000,
+  host: process.env.DB_HOST,
+  user: process.env.DB_USER,
+  password: process.env.DB_PASS,
+  database: process.env.DB_NAME,
 });
 
 // connect to DB
@@ -40,4 +40,4 @@ pool.getConnection((err, connection) => {
 const routes = require("./server/routes/user");
 app.use("/", routes);
 
-app.listen(port, "0.0.0.0", () => console.log(`Listening on port ${port}`));
+app.listen(port, () => console.log(`Listening on port ${port}`));
